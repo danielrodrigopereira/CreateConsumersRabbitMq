@@ -1,0 +1,41 @@
+micronaut:
+  executors:
+#    consumer:
+#      type: FIXED
+#      nThreads: 25
+    default:
+      type: FIXED
+      nThreads: 25
+#    product-listener:
+#      type: cached
+#      nThreads: 25
+  application:
+    name: demo
+#rabbitmq.uri: amqp://localhost:5672
+
+rabbitmq:
+  channel-pool:
+    maxIdleChannels: 15
+  host: localhost
+  username: guest
+  password: guest
+#  executors:
+#    consumer:
+#      type: fixed
+#      nThreads: 25
+#    product-listener:
+#      type: fixed
+#      nThreads: 25
+#  consumer-executor:
+#    type: FIXED
+#    nThreads: 25
+#  channel-pool:
+#    type: FIXED
+#    nThreads: 25
+#  servers:
+#    product-listener:
+#      host: localhost
+#      port: 5672
+#      consumer-executor: "product-listener"
+#  consumer-executor: consumer-test
+#  host: localhost
